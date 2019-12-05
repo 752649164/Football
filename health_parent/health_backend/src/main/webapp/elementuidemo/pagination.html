@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../plugins/elementui/index.css">
+    <link rel="stylesheet" href="../plugins/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <script src="../js/vue.js"></script>
+    <script src="../plugins/elementui/index.js"></script>
+    <script src="../js/axios-0.18.0.js"></script>
+</head>
+<body>
+<div id="app">
+    <el-pagination
+            background
+            @current-change="handleCurrentChange"
+            current-page="5"
+            page-size="10"
+            layout="total,prev,pager,next,jumper"
+            :total="1000">
+    </el-pagination>
+
+</div>
+</body>
+<script>
+    new Vue({
+        el: "#app",
+        methods:{
+            handleCurrentChange(page){
+                alert(page);
+            }
+        }
+    });
+</script>
+</html>

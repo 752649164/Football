@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" native2AsciiForPropertiesFiles="true" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$/health_mobile" charset="UTF-8" />
+    <file url="file://D:/springboot" charset="UTF-8" />
+    <file url="file://E:/ssm/项目二/项目二前置课/springcloud/01/代码/springcloud/heima-springcloud" charset="UTF-8" />
+    <file url="file://E:/ssm/项目二/项目二前置课/springcloud/01/代码/springcloud/heima-springcloud/config-server" charset="UTF-8" />
+    <file url="file://E:/ssm/项目二/项目二前置课/springcloud/01/代码/springcloud/heima-springcloud/consumer-demo" charset="UTF-8" />
+    <file url="file://E:/ssm/项目二/项目二前置课/springcloud/01/代码/springcloud/heima-springcloud/eureka-server" charset="UTF-8" />
+    <file url="file://E:/ssm/项目二/项目二前置课/springcloud/01/代码/springcloud/heima-springcloud/heima-gateway" charset="UTF-8" />
+    <file url="file://E:/ssm/项目二/项目二前置课/springcloud/01/代码/springcloud/heima-springcloud/user-service" charset="UTF-8" />
+    <file url="file://E:/ssm/项目二/项目二前置课/springcloud/01/资料/http-demo" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>

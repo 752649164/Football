@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.itheima.dao.ReportDao">
+
+    <select id="findCountMembers"  resultType="int">
+           select count(id) from t_member
+     </select>
+    <select id="findCountInDate" resultType="int" parameterType="string">
+        select count(id) from t_member where regTime=#{s}
+    </select>
+    <select id="findCountAfterDate" resultType="int" parameterType="string">
+        select count(id) from t_member where regTime &gt;=#{s}
+    </select>
+    <select id="findCountByDate" resultType="int" parameterType="string">
+        select count(id) from t_member where regTime &lt;=#{s}
+    </select>
+</mapper>

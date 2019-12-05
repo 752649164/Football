@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.itheima.dao.OrderDao">
+    <select id="findByCondition" parameterType="com.itheima.pojo.Order" resultType="com.itheima.pojo.Order">
+        select * from t_order where member_id=#{memberId} and setmeal_id=#{setmealId} and orderDate=#{orderDate}
+    </select>
+    <insert id="add" parameterType="com.itheima.pojo.Order">
+        <selectKey resultType="java.lang.Integer" keyProperty="id" order="AFTER" >
+            select LAST_INSERT_ID()
+        </selectKey>
+        insert into t_order(member_id,orderDate,orderType,orderStatus,setmeal_id)
+        values
+        (#{memberId},#{orderDate},#{orderType},#{orderStatus},#{setmealId})
+    </insert>
+
+    <select id="findById4Detail" parameterType="int" resultType="map">
+        SELECT 	t1.name member,	t3.name	setmeal,t2.orderDate orderDate,t2.orderType
+        FROM t_member t1,t_order t2,t_setmeal t3
+        WHERE t2.member_id=t1.id AND t3.id=t2.setmeal_id AND t2.id=#{id}
+    </select>
+    <select id="findCountIndate" resultType="int" parameterType="string">
+        select count(id) from t_order where orderDate=#{s}
+    </select>
+    <select id="findCountAfterDate" resultType="int" parameterType="string">
+        select count(id) from t_order where orderDate &gt;=#{s}
+    </select>
+    <select id="findOrderStatusCountIndate" resultType="int" parameterType="string">
+        select count(id) from t_order where orderDate=#{s} and orderStatus='已到诊'
+    </select>
+    <select id="findOrderStatusCountAfterDate" resultType="int" parameterType="string">
+        select count(id) from t_order where orderDate &gt;=#{s} and orderStatus='已到诊'
+    </select>
+    <select id="findHotSetmeal" resultType="map" >
+        SELECT COUNT(t1.setmeal_id) setmeal_count,t3.name name,count(t1.setmeal_id)/(select count(id) from t_order) proportion FROM t_order t1,t_member t2,t_setmeal t3
+        WHERE t1.member_id=t2.id AND t1.setmeal_id=t3.id
+        GROUP BY t1.setmeal_id
+        order by setmeal_count desc limit 0,4
+    </select>
+</mapper>

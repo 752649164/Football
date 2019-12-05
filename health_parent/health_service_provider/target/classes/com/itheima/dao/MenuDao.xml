@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.itheima.dao.MenuDao">
+    <select id="findByUsername" parameterType="string" resultType="com.itheima.pojo.Menu">
+        select t1.* from t_menu t1,t_role t2,t_user t3,t_role_menu t4,t_user_role t5
+where  t3.id=t5.user_id and t5.role_id=t2.id and t4.menu_id=t1.id and t4.role_id=t2.id and t3.username=#{username}
+    </select>
+</mapper>

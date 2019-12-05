@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="config-server" />
+        <module name="consumer-demo" />
+        <module name="eureka-server" />
+        <module name="health_backend" />
+        <module name="health_backend_demo" />
+        <module name="health_common" />
+        <module name="health_interface" />
+        <module name="health_jobs" />
+        <module name="health_mobile" />
+        <module name="health_service_demo" />
+        <module name="health_service_provider" />
+        <module name="heima-gateway" />
+        <module name="http-demo" />
+        <module name="springboot" />
+        <module name="user-service" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="8">
+      <module name="heimageteway" target="1.8" />
+      <module name="heimaspringcloud" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

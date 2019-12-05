@@ -1,0 +1,9 @@
+itheima\service\CheckItemService.class
+itheima\service\UserService.class
+itheima\service\CheckGroupService.class
+itheima\service\ReportService.class
+itheima\service\MemberService.class
+itheima\service\SetmealService.class
+itheima\service\OrderSettingService.class
+itheima\service\OrderService.class
+itheima\service\MenuService.class

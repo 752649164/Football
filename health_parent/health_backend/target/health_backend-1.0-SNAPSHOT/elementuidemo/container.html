@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../plugins/elementui/index.css">
+    <link rel="stylesheet" href="../plugins/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <script src="../js/vue.js"></script>
+    <script src="../plugins/elementui/index.js"></script>
+    <script src="../js/axios-0.18.0.js"></script>
+    <style>
+        .el-header, .el-footer {
+            background-color: #B3C0D1;
+            color: #333;
+            text-align: center;
+            line-height: 60px;
+        }
+        .el-aside {
+            background-color: #D3DCE6;
+            color: #333;
+            text-align: center;
+            line-height: 500px;
+        }
+        .el-main {
+            background-color: #E9EEF3;
+            color: #333;
+            text-align: center;
+            line-height: 500px;
+        }
+        .el-container{
+            text-align: right;
+        }
+        .el-dropdown{
+
+        }
+    </style>
+</head>
+<body>
+        <div id="app">
+            <el-container>
+                <el-header >Header</el-header>
+                <el-container>
+                    <el-aside width="200px">
+
+                        <el-col :span="12">
+                            <el-menu
+                                    default-active="2"
+                                    class="el-menu-vertical-demo"
+                                    @open="handleOpen"
+                                    @close="handleClose"
+                                    background-color="#545c64"
+                                    text-color="#fff"
+                                    active-text-color="#ffd04b">
+                                <el-submenu index="1">
+                                    <template slot="title">
+                                        <i class="el-icon-location"></i>
+                                        <span>导航一</span>
+                                    </template>
+                                    <el-menu-item >选项1</el-menu-item>
+                                    <el-menu-item >选项2</el-menu-item>
+                                    <el-menu-item >选项3</el-menu-item>
+                                </el-submenu>
+                                <el-submenu index="2">
+                                    <template slot="title">
+                                        <i class="el-icon-menu"></i>
+                                        <span slot="title">导航二</span>
+                                    </template>
+                                    <el-menu-item >选项1</el-menu-item>
+                                    <el-menu-item >选项2</el-menu-item>
+                                    <el-menu-item >选项3</el-menu-item>
+                                </el-submenu>
+
+                            </el-menu>
+                        </el-col>
+                        </el-row>
+                    </el-aside>
+                    <el-container>
+                        <el-main> <el-dropdown size="mini" split-button type="primary">
+                            默认尺寸
+                            <el-dropdown-menu slot="dropdown">
+                                <el-dropdown-item >黄金糕</el-dropdown-item>
+                                <el-dropdown-item divided>狮子头</el-dropdown-item>
+                                <el-dropdown-item divided>螺蛳粉</el-dropdown-item>
+                                <el-dropdown-item divided>双皮奶</el-dropdown-item>
+                                <el-dropdown-item divided>蚵仔煎</el-dropdown-item>
+                            </el-dropdown-menu>
+                        </el-dropdown></br></el-main>
+                        <el-footer>Footer</el-footer>
+                    </el-container>
+                </el-container>
+            </el-container>
+
+
+        </div>
+</body>
+<script>
+    new Vue({
+        el:"#app"
+    });
+</script>
+</html>
